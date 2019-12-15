@@ -59,6 +59,18 @@ int main(void)
 
   }
 
+  printf("\nAaand, translated the text is :\n");
+  for (i=0; i<strlen(cyphertext); i++){
+    if (i%30 == 0) printf("\n");
+    if (strncmp(cyphertext[i],"W",1)) {
+       printf("t");
+    } else {
+
+       printf("%c", cyphertext[i]);
+
+    }
+
+  }
    printf("\n");
    return 0;
 } 
