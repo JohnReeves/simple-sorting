@@ -25,14 +25,14 @@ int main(void)
    }
     printf(" or ");
 
-    // keeping spaces, printing forwards
+    // keeping spaces, printing backwards
     for (i = strlen(name); i >= 0; i--) {
       printf("%c", name[i]);
     }
      printf("\n");
 
   printf("\nThe cypher challenge text is :\n");
-  for (i=0; i<strlen(cyphertext); i++){
+  for (i = 0; i < strlen(cyphertext); i++){
     if (i%30 == 0) printf("\n");
     printf("%c", cyphertext[i]);
   }
@@ -49,6 +49,7 @@ int main(void)
     // trying these ones
     if (cyphertext[i] == 'D') printf("a"); else
     if (cyphertext[i] == 'V') printf("s"); else
+    if (cyphertext[i] == 'L') printf("i"); else
 
     // display the letter we don't know yet
     printf("%c", cyphertext[i]);
