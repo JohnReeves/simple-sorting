@@ -14,37 +14,52 @@ int main(void) {
 
 void bubble_srt(int a[], int n);
 
+
+char cyphertext[]="WKH HDVLHVW PHWKRG RI HQFLSKHULQJ D WHAW PHVVDJH LV WR UHSODFH HDFK FKDUDFWHU EB DQRWKHU XVLQJ D ILAHG UXOH, VR IRU HADPSOH HYHUB OHWWHU D PDB EH UHSODFHG EB G, DQG HYHUB OHWWHU E EB WKH OHWWHU H DQG VR RQ.";
+char alphabet[]="abcdefghijklmnopqrstuvwxyz";
+
 int main(void) 
 {
    int i;
    int array[INDEX] = {12, 9, 4, 99, 120, 1, 3, 10};
    char * john = "John\0";
 
-   printf("\nBefore the sort:\n");
+   printf("Hello %s, ", john);
+   // printf("forwards: ");
+   for (i=0; i<strlen(john);i++) {
+      printf("%c", john[i]);
+   }
+    printf(" or ");
+
+    // printf("backwards: ");
+    for (i=strlen(john); i>=0;i--) {
+      printf("%c", john[i]);
+    }
+     printf("\n");
+
+   printf("\nSome numbers: ");
    for(i = 0; i < INDEX; i++)
       printf("%d ", array[i]);
    printf("\n");
      
    bubble_srt(array, INDEX);
    
-   printf("After the sort:\n");
+   printf("Sorted:        ");
    for(i = 0; i < INDEX; i++)
       printf("%d ", array[i]);
    printf("\n");   
 
    // system("pause"); doesn't do anything here
 
-   printf("\nHello %s\n", john);
-   printf("forwards; ");
-   for (i=0; i<strlen(john);i++)
-      printf("%c ", john[i]);
-    printf("\n");
+   
+  printf("\nSooo, the cypher challenge text is :\n");
+  for (i=0; i<strlen(cyphertext); i++){
+    if (i%30 == 0) printf("\n");
+    printf("%c", cyphertext[i]);
 
-    printf("backwards: ");
-    for (i=strlen(john); i>=0;i--)
-      printf("%c ", john[i]);
-     printf("\n");
+  }
 
+   printf("\n");
    return 0;
 } 
 
