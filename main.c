@@ -7,6 +7,8 @@ int main(void) {
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
 #define SWAP(a,b)   { int t; t=a; a=b; b=t; }
 #define INDEX 8
 
@@ -16,8 +18,9 @@ int main(void)
 {
    int i;
    int array[INDEX] = {12, 9, 4, 99, 120, 1, 3, 10};
-   
-   printf("Before the sort:\n");
+   char * john = "John\0";
+
+   printf("\nBefore the sort:\n");
    for(i = 0; i < INDEX; i++)
       printf("%d ", array[i]);
    printf("\n");
@@ -29,7 +32,19 @@ int main(void)
       printf("%d ", array[i]);
    printf("\n");   
 
-   system("PAUSE"); 
+   // system("pause"); doesn't do anything here
+
+   printf("\nHello %s\n", john);
+   printf("forwards; ");
+   for (i=0; i<strlen(john);i++)
+      printf("%c ", john[i]);
+    printf("\n");
+
+    printf("backwards: ");
+    for (i=strlen(john); i>=0;i--)
+      printf("%c ", john[i]);
+     printf("\n");
+
    return 0;
 } 
 
