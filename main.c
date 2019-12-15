@@ -37,6 +37,12 @@ int main(void)
     printf("%c", cyphertext[i]);
   }
 
+    // alphabet with a shift
+    printf("\n\n");
+    for (i = 0; i < strlen(alphabet); i++) {
+      printf("%c", alphabet[i]);
+    }
+
   printf("\n\nAaand, translated the text is :\n");
   for (i=0; i<strlen(cyphertext); i++){
     // formatting
