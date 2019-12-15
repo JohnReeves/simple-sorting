@@ -11,6 +11,7 @@ int main(void) {
 
 char cyphertext[]="WKH HDVLHVW PHWKRG RI HQFLSKHULQJ D WHAW PHVVDJH LV WR UHSODFH HDFK FKDUDFWHU EB DQRWKHU XVLQJ D ILAHG UXOH, VR IRU HADPSOH HYHUB OHWWHU D PDB EH UHSODFHG EB G, DQG HYHUB OHWWHU E EB WKH OHWWHU H DQG VR RQ.";
 char alphabet[]="abcdefghijklmnopqrstuvwxyz";
+int shift = 23; 
 
 int main(void) 
 {
@@ -41,6 +42,7 @@ int main(void)
     printf("\n\n");
     for (i = 0; i < strlen(alphabet); i++) {
       printf("%c", alphabet[i]);
+      printf(" -> %c, ",alphabet[((i+shift) % 26)]);
     }
 
   printf("\n\nAaand, translated the text is :\n");
@@ -55,7 +57,6 @@ int main(void)
     // trying these ones
     if (cyphertext[i] == 'D') printf("a"); else
     if (cyphertext[i] == 'V') printf("s"); else
-    if (cyphertext[i] == 'L') printf("i"); else
 
     // display the letter we don't know yet
     printf("%c", cyphertext[i]);
