@@ -12,14 +12,12 @@ int main(void) {
 char cyphertext[]="WKH HDVLHVW PHWKRG RI HQFLSKHULQJ D WHAW PHVVDJH LV WR UHSODFH HDFK FKDUDFWHU EB DQRWKHU XVLQJ D ILAHG UXOH, VR IRU HADPSOH HYHUB OHWWHU D PDB EH UHSODFHG EB G, DQG HYHUB OHWWHU E EB WKH OHWWHU H DQG VR RQ.";
 char alphabet[]="abcdefghijklmnopqrstuvwxyz";
 int shift = 23; 
-<<<<<<< HEAD
+
 int a = 5;
 int b = 3;
 
 // affine letter shift = a*x+b % 26
 // thus the caesar letter shift = a*x + 0 % 26
-=======
->>>>>>> origin/master
 
 int main(void) 
 {
@@ -40,46 +38,25 @@ int main(void)
     }
      printf("\n");
 
-<<<<<<< HEAD
-  
-    printf("\nThe cypher challenge text is :\n");
-    for (i = 0; i < strlen(cyphertext); i++){
-      if (i%30 == 0) printf("\n");
-      printf("%c", cyphertext[i]);
-=======
   printf("\nThe cypher challenge text is :\n");
   for (i = 0; i < strlen(cyphertext); i++){
     if (i%30 == 0) printf("\n");
     printf("%c", cyphertext[i]);
   }
 
-    // alphabet with a shift
     printf("\n\n");
-    for (i = 0; i < strlen(alphabet); i++) {
-      printf("%c", alphabet[i]);
-      printf(" -> %c, ",alphabet[((i+shift) % 26)]);
->>>>>>> origin/master
-    }
+    printf("[We think we know: \"WKH\" is \"the\"]\n");
+    printf("[We are trying . : \"D\" as \"a\" and \"V\" as \"s\"]\n");
 
     printf("\n\nAaand, translated the text is :\n");
     for (i=0; i<strlen(cyphertext); i++){
       // formatting
       if (i%30 == 0) printf("\n");
 
-<<<<<<< HEAD
       // translated letters
       if (cyphertext[i] == 'W') printf("t"); else
       if (cyphertext[i] == 'K') printf("h"); else
       if (cyphertext[i] == 'H') printf("e"); else
-=======
-    // translated letters
-    if (cyphertext[i] == 'W') printf("t"); else
-    if (cyphertext[i] == 'K') printf("h"); else
-    if (cyphertext[i] == 'H') printf("e"); else
-    // trying these ones
-    if (cyphertext[i] == 'D') printf("a"); else
-    if (cyphertext[i] == 'V') printf("s"); else
->>>>>>> origin/master
 
       // trying these ones
       if (cyphertext[i] == 'D') printf("a"); else
@@ -89,12 +66,8 @@ int main(void)
       printf("%c", cyphertext[i]);
     }
 
-    printf("\n\n");
-    printf("[We think we know: \"WKH\" is \"the\"]\n");
-    printf("[We are trying . : \"D\" as \"a\" and \"V\" as \"s\"]\n");
-    
     // alphabet with a shift
-    printf("\n");
+    printf("\n\n");
     for (i = 0; i < strlen(alphabet); i++) {
       printf("%c", alphabet[i]);
       printf(" -> %c, ",alphabet[((i+shift) % 26)]);
