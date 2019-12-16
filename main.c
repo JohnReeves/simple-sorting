@@ -1,23 +1,15 @@
-/*
-int main(void) {
-  printf("Hello World\n");
-  return 0;
-}
-*/
-
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
 char cyphertext[]="WKH HDVLHVW PHWKRG RI HQFLSKHULQJ D WHAW PHVVDJH LV WR UHSODFH HDFK FKDUDFWHU EB DQRWKHU XVLQJ D ILAHG UXOH, VR IRU HADPSOH HYHUB OHWWHU D PDB EH UHSODFHG EB G, DQG HYHUB OHWWHU E EB WKH OHWWHU H DQG VR RQ.";
 char alphabet[]="abcdefghijklmnopqrstuvwxyz";
+
+// affine letter shift = (a*x + b) % 26
+// thus the caesar letter shift = (1*x + a) % 26
 int shift = 23; 
 
 int a = 5;
 int b = 3;
-
-// affine letter shift = a*x+b % 26
-// thus the caesar letter shift = a*x + 0 % 26
 
 int main(void) 
 {
@@ -48,7 +40,7 @@ int main(void)
     printf("[We think we know: \"WKH\" is \"the\"]\n");
     printf("[We are trying . : \"D\" as \"a\" and \"V\" as \"s\"]\n");
 
-    printf("\n\nAaand, translated the text is :\n");
+    printf("\nAaand, translated the text is :\n");
     for (i=0; i<strlen(cyphertext); i++){
       // formatting
       if (i%30 == 0) printf("\n");
@@ -65,15 +57,22 @@ int main(void)
       // display the letter we don't know yet
       printf("%c", cyphertext[i]);
     }
+    printf("\n");
 
-    // alphabet with a shift
-    printf("\n\n");
+    printf("\nAlphabet with a Caesar shift\n");
     for (i = 0; i < strlen(alphabet); i++) {
       printf("%c", alphabet[i]);
-      printf(" -> %c, ",alphabet[((i+shift) % 26)]);
+      printf(" -> %c, ",alphabet[((i + shift) % 26)]);
     }
-
     printf("\n");
+
+    printf("\nAlphabet with an affine shift\n");
+    for (i = 0; i < strlen(alphabet); i++) {
+      printf("%c", alphabet[i]);
+      printf(" -> %c, ",alphabet[((a*i + b) % 26)]);
+    }
+    printf("\n");
+
     return 0;
 } 
 

@@ -1,24 +1,18 @@
 # ciphers in c
 ## (are still very easy)
 
+Cipher Challenge website suggests using Word and Excel to do 
+things that only take a couple of lines of code.
+
+Being lazy let's just do the couple of lines of programming instead.
+
 For decripting text, we a simply using the computer to record 
 our thoughts during the trial and error process.
 
-Mr Gill tends to use Word and Excel to do things that only
-take a couple of lines of code.
-
-To be fair to Mr Gill, that is exactly what the Cipher Challenge
-website says to do.
-
-Being lazy let's do the couple of lines of programming instead.
-
 ### Task 1. Make a list of common decript functions  
 
-These are all taken from listening to Mr Gill use the *very*
- complicated process in Word and Excel, and from the Cipher 
- Challenge worksheets.
-
-The first list of what we might like to do:   
+The Cipher Challenge worksheets uses the following functions
+for decrypting the cipher text:   
 * print the cipher text   
 * substitue letters that you know   
 * reversing the text   
