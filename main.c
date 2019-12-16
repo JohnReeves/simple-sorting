@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <string.h>
 
-char cyphertext[]="WKH HDVLHVW PHWKRG RI HQFLSKHULQJ D WHAW PHVVDJH LV WR UHSODFH HDFK FKDUDFWHU EB DQRWKHU XVLQJ D ILAHG UXOH, VR IRU HADPSOH HYHUB OHWWHU D PDB EH UHSODFHG EB G, DQG HYHUB OHWWHU E EB WKH OHWWHU H DQG VR RQ.";
+char cyphertext[]="GXXGS EZJIJ TEBCE HGJUB ZRBDE ZGYED AKJJE HRKCU IIRTE DKXED NBHJK EIDGP JTEJE ZJTIJ GZDAP NBHNK HJTEH UZIJH KRJUB ZIJTE PMUXX NBXXB MJTEM EGCBZ MUXXA EDEXU LEHED BZJTE EUSTJ TGZDJ TEJGH SEJMU XXAEU DEZJU NUEDU ZJTEE YGUXP BKMUX XHERE ULEBZ JTEZU ZJTJT ESBIU SZGXM UXXAE IEZJB ZJTEY BHZUZ SBNJT EJEZJ T";
+
+//"WKH HDVLHVW PHWKRG RI HQFLSKHULQJ D WHAW PHVVDJH LV WR UHSODFH HDFK FKDUDFWHU EB DQRWKHU XVLQJ D ILAHG UXOH, VR IRU HADPSOH HYHUB OHWWHU D PDB EH UHSODFHG EB G, DQG HYHUB OHWWHU E EB WKH OHWWHU H DQG VR RQ.";
 char alphabet[]="abcdefghijklmnopqrstuvwxyz";
 
 // affine letter shift = (a*x + b) % 26
@@ -46,13 +48,18 @@ int main(void)
       if (i%30 == 0) printf("\n");
 
       // translated letters
-      if (cyphertext[i] == 'W') printf("t"); else
-      if (cyphertext[i] == 'K') printf("h"); else
-      if (cyphertext[i] == 'H') printf("e"); else
+      // if (cyphertext[i] == 'W') printf("t"); else
+      // if (cyphertext[i] == 'K') printf("h"); else
+      // if (cyphertext[i] == 'H') printf("e"); else
+      if (cyphertext[i] == 'J') printf("t"); else
+      if (cyphertext[i] == 'T') printf("h"); else
+      if (cyphertext[i] == 'E') printf("e"); else
 
       // trying these ones
-      if (cyphertext[i] == 'D') printf("a"); else
-      if (cyphertext[i] == 'V') printf("s"); else
+      // if (cyphertext[i] == 'D') printf("a"); else
+      // if (cyphertext[i] == 'V') printf("s"); else
+      
+
 
       // display the letter we don't know yet
       printf("%c", cyphertext[i]);
