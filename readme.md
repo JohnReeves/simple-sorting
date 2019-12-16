@@ -34,7 +34,7 @@ Let's start with 'hello world' the most widely used program
 for finding out how to display things on the screen, how to 
 organise our programs, and how to build and run on the computer.
 
-In ```repl.it` start a new `c` repl and press `run`:
+In `repl.it` start a new `c` repl and press `run`:
 
 #### Hello_World.c 
 ```c
@@ -67,7 +67,7 @@ Did you remember to give a string called `cipher_text`?
 ```c
 char cyphertext[]="WKH HDVLHVW PHWKRG RI HQFLSKHULQJ D WHAW PHVVDJH LV WR UHSODFH HDFK FKDUDFWHU EB DQRWKHU XVLQJ D ILAHG UXOH, VR IRU HADPSOH HYHUB OHWWHU D PDB EH UHSODFHG EB G, DQG HYHUB OHWWHU E EB WKH OHWWHU H DQG VR RQ.";
 ```
-### Task 3. substitue letters that you know   
+### Task 3. Substitue letters that you know   
 
 Powerpoint 1 tells us that WKH repeats itself and 
 thus might be 'the'.
@@ -89,7 +89,7 @@ for (i = 0; i < cipher_text); i++){
 }
 ```
 
-### Task 4. reversing the text   
+### Task 4. Reversing the text   
 
 ```c
     // keeping spaces, printing backwards
@@ -99,7 +99,7 @@ for (i = 0; i < cipher_text); i++){
      printf("\n");
 ```
 
-### Task 5. removing spaces   
+### Task 5. Removing spaces   
 
 The space is just another character, so if we want to remove 
 spaces we just don't print them.
@@ -112,7 +112,7 @@ spaces we just don't print them.
     printf(" or ");
 ```
 
-### Task 6. printing the trial alphabet    
+### Task 6. Printing the trial alphabet    
 
 #### Caesar shift
 
