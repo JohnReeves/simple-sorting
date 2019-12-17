@@ -39,13 +39,15 @@ int main(void)
   }
 
     printf("\n\n");
-    printf("[We think we know: \"WKH\" is \"the\"]\n");
+    // printf("[We think we know: \"WKH\" is \"the\"]\n");
+    // printf("[We are trying . : \"D\" as \"a\" and \"V\" as \"s\"]\n");
+    printf("[We think we know: \"JTE\" is \"the\"]\n");
     printf("[We are trying . : \"D\" as \"a\" and \"V\" as \"s\"]\n");
 
     printf("\nAaand, translated the text is :\n");
     for (i=0; i<strlen(cyphertext); i++){
       // formatting
-      if (i%30 == 0) printf("\n");
+      //if (i%30 == 0) printf("\n");
 
       // translated letters
       // if (cyphertext[i] == 'W') printf("t"); else
@@ -58,7 +60,16 @@ int main(void)
       // trying these ones
       // if (cyphertext[i] == 'D') printf("a"); else
       // if (cyphertext[i] == 'V') printf("s"); else
-      
+      if (cyphertext[i] == 'Z') printf("n"); else
+      if (cyphertext[i] == 'K') printf("u"); else
+      if (cyphertext[i] == 'H') printf("r"); else
+      if (cyphertext[i] == 'C') printf("p"); else
+      if (cyphertext[i] == 'I') printf("s"); else
+      if (cyphertext[i] == 'D') printf("d"); else
+      if (cyphertext[i] == 'G') printf("a"); else
+      if (cyphertext[i] == 'P') printf("y"); else
+      if (cyphertext[i] == ' ') printf(""); else
+       
 
 
       // display the letter we don't know yet
